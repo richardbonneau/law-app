@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import styled from 'styled-components'
+import SubOption from './Option.js'
 
 
 
-const Button = styled.button`
-  color:white;
+const Button = styled.a`
+  color:#262626;
+  text-align:left;
   display:inline-block;
-  margin: 0 10px 0 0;
-  padding: 15px 45px;
+  margin: 2px;
+  padding: 10px 30px;
   width:800px;
   font-size:20px;
   line-height:1.8;
-  box-shadow:none;
-  border-radius:0;
+  border: 5px solid white;
+  
   background-color: Transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
 
   :hover{
-    color:blue;
+    color:#c0c0c0;
     appearance: none;
   }
+
+  :focus {outline:none;}
 
   
 `
@@ -30,14 +35,12 @@ class Option extends Component {
     super(props)
   }
 
-  randomFunction(){
-    console.log('func')
-  }
+
 
   render() {
     return (
       <div className="App">
-        <Button>{this.props.text}</Button>
+        <Link to={this.props.linkto}><Button>{this.props.text}</Button></Link>
       </div>
     );
   }
