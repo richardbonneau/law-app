@@ -26,19 +26,28 @@ const Hero = styled.img`
 `
 
 class Header extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
   }
 
-  
-    render() {
+
+  render() {
     return (
       <div className="HeaderBackground">
-      <HeadSpace />
-      <Logo src={logo} />
-              <Link to="/home"><button>Home</button></Link>
-              <Link to="/step1"><button>Get Started</button></Link>
-              <Link to="/about"><button>Our mission</button></Link>
+        <HeadSpace />
+        <Logo src={logo} />
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row-reverse',
+
+        }}>
+          <Link style={{ margin: '0 8px' }} to="/about">Our mission</Link>
+          <Link style={{ margin: '0 8px' }} to="/step1">Get Started</Link>
+          <Link style={{ margin: '0 8px' }} to="/home">Home</Link>
+
+
+        </div>
+
 
       </div>
     );

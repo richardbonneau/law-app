@@ -1,29 +1,42 @@
 import React, { Component } from 'react';
-import hero from '../images/mtl-apt.jpg'
+import hero from '../images/three-apt.jpg'
 import styled from 'styled-components'
 import '../App.css';
 
-const Hero = styled.div`
-    width:55%;
-    max-height:100%;
-    position:absolute;
-    top:0;
-    left:0;
+import Slider from 'react-slick'
+
+
+
+const Hero = styled.header`
+  background-image: linear-gradient(to left bottom, #97afc4cc, #1d2731cc), url(${hero});
+  background-size: cover;
+  min-height: 90vh;
+  background-position: top;
 `
 
 class Home extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
   }
 
-      
-    render() {
+
+  render() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     return (
       <div className="App">
+        {/* <header className="App-header" style={{ backgroundImage: `url(${hero})`, backgroundSize: '300px 100px' }}></header> */}
+        <Hero></Hero>
+        {/* <img src={hero} className='hero' /> */}
+        {/* <img src={hero} /> */}
 
-    <Hero className='hero'  />
-        
-      </div>
+
+      </div >
     );
   }
 }

@@ -10,9 +10,11 @@ h1{
 }
 
 .HeaderBackground{
-  background: #c0c0c0;
-  text-align: center;
+  background: linear-gradient(to left bottom, #dadada,#f3e6c9);
+}
 
+.hero{
+  color:#083c5dcc
 }
 
 

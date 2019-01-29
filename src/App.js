@@ -18,30 +18,27 @@ class App extends Component {
     }
   }
 
-
-  
-
   render() {
-    const GetStarted = (props) =>{
+    const GetStarted = (props) => {
       return (
         <List
-        step={'GetStarted'}
+          step={'GetStarted'}
         />
       )
     }
 
-    const Eviction = (props) =>{
+    const Eviction = (props) => {
       return (
         <List
-        step={'Eviction'}
+          step={'Eviction'}
         />
       )
     }
 
-    const FinalStep = (props) =>{
+    const FinalStep = (props) => {
       return (
         <List
-        step={'FinalStep'}
+          step={'FinalStep'}
         />
       )
     }
